@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.btn-primary{
+    background: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.container{
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    flex-direction: row;
+}
+.leftPane{
+    /* width: 150px; */
+    height:100%;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    background: rgb(192, 134, 142);
+    flex: .5;
+}
+.panel-head{
+    background: rgb(78, 154, 226);
+    cursor: none;
+    padding: 10px;
+    color: white;
+}
+.panel-item{
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.panel-item:hover{
+    background: gray;
+}
+.panel-item-sub{
+    padding: 10px;
+    padding-left: 18px;
+    cursor: pointer;
+}
+.panel-item-sub:hover{
+    background: gray;
+}
+.rightPane{
+    /* width: 150px; */
+    height:100%;
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: blue;
+    background:rgb(165, 204, 214);
+    flex:3;
+
+}
+.panel{
+    margin: 0 auto;
+    border: 1px solid gray;
+    /* border-radius: 10px; */
+    background: rgb(97, 165, 137);
+    width: 99%;
+    /* height: 99%; */
+    min-height: 90%;
+}
+.phead{
+    padding: 25px;
+    background: gray;
+    color: white;
+    /* border-radius: 10px; */
+    border-bottom: 1px solid green;
+}
+.panel-body{
+    padding: 25px;
+}
+.popup{
+    background: white;
+    border: 1px solid gray;
+    width: 90%;
+    height: 90%;
+}
+table, th, td{
+    border: solid 1px grey;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+table{
+    width: 99%;
+    margin: 0 auto;
+}
+th{
+    color: aliceblue;
+    background: rgb(192, 134, 142);
+}
+td{
+    color: grey;
+}
+tr:nth-child(even) {background-color: #f5cae2;}
+tr:nth-child(odd) {background-color: #f7ebf2;}
+/*td, th{
+    padding: 5px;
+} */

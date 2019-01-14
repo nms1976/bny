@@ -1,0 +1,41 @@
+[
+    {
+        "trade_id": "wwwrewqer",
+        "stl_date": "673566",
+        "tr_date": "4574575",
+        "asset_class": "32457",
+        "itype": "47",
+        "ac_id": "e5",
+        "br_code": "4574",
+        "amount": "4575",
+        "tr_type": "575",
+        "qty": "45",
+        "tick": "45745"
+    },
+    {
+        "trade_id": "",
+        "stl_date": "",
+        "tr_date": "",
+        "asset_class": "",
+        "itype": "",
+        "ac_id": "",
+        "br_code": "",
+        "amount": "",
+        "tr_type": "",
+        "qty": "",
+        "tick": ""
+    },
+    {
+        "trade_id": "",
+        "stl_date": "",
+        "tr_date": "",
+        "asset_class": "",
+        "itype": "",
+        "ac_id": "",
+        "br_code": "",
+        "amount": "",
+        "tr_type": "",
+        "qty": "",
+        "tick": ""
+    }
+]

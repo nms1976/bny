@@ -1,0 +1,98 @@
+
+<div class="container">
+  <div class="leftPane">
+    <div class="panel-item" (click)="gb=false;head='Todays Trade';btn=false;getTodayData()">Today's Trade</div>
+    <div class="panel-item" (click)="today='';gb=false;head='Last 15 days';btn=true">Last 15 days</div>
+    <div class="panel-head">Group By</div>
+    <div class="panel-item-sub" (click)="gb=true;groupBy('ac_id');gbkey='Account Id'">Account ID</div>
+    <div class="panel-item-sub" (click)="gb=true;groupBy('tr_type');gbkey='Transaction Type'">Transaction Type</div>
+    <div class="panel-item-sub" (click)="gb=true;groupBy('itype');gbkey='Instrument Type'">Instrument Type</div>
+    <div class="panel-item-sub" (click)="gb=true;groupBy('tick');gbkey='Tick'">Tick</div>
+    <div class="panel-item-sub" (click)="gb=true;groupBy('br_code');gbkey='Broker'">Broker</div>
+  <br> <br> <br> <br> <br> <br>
+  <div class="btn-primary" (click) = "gb=false;head='Todays Trade';btn=false;dtype='Mock';getMockData()">Mock Data</div>
+  <div class="btn-primary" (click) = "gb=false;head='Todays Trade';btn=false;dtype='Dynamic';getDynData()">Dynamic Data</div>
+  </div>
+
+  <div class="rightPane">
+    <div class="panel">
+     
+      <div *ngIf=!gb>
+        <div class="phead"> {{head}} <i>[{{dtype}} data]</i>
+          <div class="btn-primary" *ngIf="btn && !popup" style="float: right;" (click)='popup=true'>Trend</div>
+        </div>
+        <div class="panel-body">
+          <div *ngIf=popup class="popup">
+            <div class="panel-item" style="float: right" (click)="popup=false">X</div>
+            <chart [options]=options></chart>
+          </div>
+         <div *ngIf=!popup>
+          <table>
+
+            <th>Trade Id</th>
+            <th>Trade Date</th>
+            <th>Settlement Date</th>
+            <th>Asset Class</th>
+            <th>Instrument Type</th>
+            <th>Account</th>
+            <th>Broker code</th>
+            <th>Amount</th>
+            <th>Trans Type</th>
+            <th>Qty</th>
+            <th>Tick</th>
+
+            <tr *ngFor="let datarow of data|datePipe:today">
+              <td>{{datarow.trade_id}}</td>
+              <td>{{datarow.tr_date}}</td>
+              <td>{{datarow.stl_date}}</td>
+              <td>{{datarow.asset_class}}</td>
+              <td>{{datarow.itype}}</td>
+              <td>{{datarow.ac_id}}</td>
+              <td>{{datarow.br_code}}</td>
+              <td style="text-align: right;">{{datarow.amount|currency}}</td>
+              <td>{{datarow.tr_type}}</td>
+              <td style="text-align: right;">{{datarow.qty}}</td>
+              <td>{{datarow.tick}}</td>
+            </tr>
+
+          </table>
+          </div>
+        </div>
+      </div>
+      <div *ngIf=gb>
+        <div class="phead">Group by {{gbkey}} <i>[{{dtype}} data]</i></div>
+        <div class="panel-body">
+          <div *ngFor="let datarow of groupby_ar" style="margin-bottom: 25px">
+            <div class="gbhead">{{datarow[0][key]|uppercase}}</div>
+            <table>
+              <th>Trade Id</th>
+              <th>Trade Date</th>
+              <th>Settlement Date</th>
+              <th>Asset Class</th>
+              <th>Instrument Type</th>
+              <th>Account</th>
+              <th>Broker code</th>
+              <th>Amount</th>
+              <th>Trans Type</th>
+              <th>Qty</th>
+              <th>Tick</th>
+              <tr *ngFor="let drow of datarow">
+                <td>{{drow.trade_id}}</td>
+                <td>{{drow.tr_date}}</td>
+                <td>{{drow.stl_date}}</td>
+                <td>{{drow.asset_class}}</td>
+                <td>{{drow.itype}}</td>
+                <td>{{drow.ac_id}}</td>
+                <td>{{drow.br_code}}</td>
+                <td style="text-align: right;">{{drow.amount|currency}}</td>
+                <td>{{drow.tr_type}}</td>
+                <td style="text-align: right;">{{drow.qty}}</td>
+                <td>{{drow.tick}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

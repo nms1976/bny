@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+    width:100%;
+    /* height: min-content; */
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: visible;
+}
+.welcomebox{
+    background: orange;
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.btn-primary{
+    background: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.container{
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    flex-direction: row;
+}
+.leftPane{
+    /* width: 150px; */
+    min-height:100%;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    background: rgb(110, 110, 110);
+    flex: .5;
+}
+.panel-head{
+    background: rgb(78, 154, 226);
+    cursor: none;
+    padding: 10px;
+    color: white;
+}
+.panel-item{
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.panel-item:hover{
+    background: gray;
+}
+.panel-item-sub{
+    padding: 10px;
+    padding-left: 18px;
+    cursor: pointer;
+}
+.panel-item-sub:hover{
+    background: gray;
+}
+.rightPane{
+    /* width: 150px; */
+    height:100%;
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: blue;
+    background:rgb(218, 218, 218);
+    flex:3;
+
+}
+.panel{
+    margin: 0 auto;
+    border: 1px solid gray;
+    /* border-radius: 10px; */
+    background: rgb(228, 228, 228);
+    width: 99%;
+    /* height: 99%; */
+    min-height: 90%;
+   
+}
+.phead{
+    padding: 25px;
+    background: rgb(122, 122, 122);;
+    color: white;
+    /* border-radius: 10px; */
+    border-bottom: 1px solid grey;
+}
+.panel-body{
+    padding: 25px;
+    overflow: auto;
+}
+.popup{
+    background: white;
+    border: 1px solid gray;
+    width: 90%;
+    height: 90%;
+}
+table, th, td{
+    border: solid 1px grey;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+}
+table{
+    width: 99%;
+    margin: 0 auto;
+}
+th{
+    color: aliceblue;
+    background: rgb(15, 0, 148);
+    text-align: center;
+}
+td{
+    color: rgb(0, 0, 0);
+}
+tr:nth-child(even) {background-color: #c3ddf5;}
+tr:nth-child(odd) {background-color: #9dc5f0;}
+
+.gbhead{
+    background: rgb(97, 46, 145);
+    color: white;
+    font-size: 13px;
+    padding: 5px;
+    display: inline-block;
+}
+
+div.panel{
+    overflow: visible;
+}
+
+.menubar{
+    background: white;
+    box-shadow: 1px 1px 10px lightgrey;
+    height: 32px;
+    width: 100%;
+    padding: 10px;
+    cursor: default;
+    position: fixed;
+}
+.menu-item{
+    border-right: 1px solid grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: grey;
+    padding: 10px;
+    display: inline-block;
+}
+.menu-item:hover{
+    background: rgb(211, 211, 211);
+}
+/*td, th{
+    padding: 5px;
+} */
